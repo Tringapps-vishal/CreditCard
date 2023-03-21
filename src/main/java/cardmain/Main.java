@@ -10,9 +10,9 @@ public class Main {
         Logger log=Logger.getLogger("Main");
         Scanner sc1=new Scanner(System.in);
         String cname;
-        String dubcname;
-        String exdate;
-        String dubexdate;
+        String duplicateName;
+        String exDate;
+        String duplicateDate;
         Long cno;
         Long duplicateNo;
 
@@ -23,20 +23,20 @@ public class Main {
         log.info("Enter the credit card number: ");
         cno=sc.nextLong();
         log.info("Enter the credit card expiration date: ");
-        exdate=sc1.nextLine();
+        exDate=sc1.nextLine();
 
-        Details d=new Details(cname, cno, exdate);
+        Details d=new Details(cname, cno, exDate);
         Details clone=(Details)d.clone();
 
 
         log.info("\n ------DOBLICATE CARD DETAILS------");
         log.info("Enter the credit cardholder's name: ");
-        dubcname=sc1.nextLine();
+        duplicateName=sc1.nextLine();
         log.info("Enter the credit card number: ");
         duplicateNo=sc.nextLong();
         log.info("Enter the credit card expiration date: ");
-        dubexdate=sc1.nextLine();
-        Details dub=new Details(dubcname, duplicateNo, dubexdate);
+        duplicateDate=sc1.nextLine();
+        Details dub=new Details(duplicateName, duplicateNo, duplicateDate);
         log.info("\n Cloned Details of Original card : \n\n");
         clone.display();
         log.info("\n Details of Duplicate card : \n\n");
