@@ -1,6 +1,7 @@
 package carddetails;
 
 import java.util.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Details implements Cloneable{
@@ -16,9 +17,9 @@ public class Details implements Cloneable{
     }
     public void display()
     {
-        log.info("Your credit card Name:"+this.cname+"");
-        log.info("Your credit card Number:"+this.cno+"");
-        log.info("Your credit card Expiration date:"+this.exDate +"");
+        log.log(Level.INFO,()->("Your credit card Name:"+this.cname+""));
+        log.log(Level.INFO,()->("Your credit card Number:"+this.cno+""));
+        log.log(Level.INFO,()->("Your credit card Expiration date:"+this.exDate +""));
     }
     public Object clone() throws CloneNotSupportedException
     {
